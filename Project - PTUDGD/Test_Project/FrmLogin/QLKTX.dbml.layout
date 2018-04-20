@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.75" name="QLKTX">
+  <DataContextMoniker Name="/QLKTXDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2e4c4f76-30b4-48d3-8ccc-51c899f1cecf" absoluteBounds="0.75, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLKTXDataContext/CANBO_QL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e43bdc21-9991-4d38-a39b-57dfc65be380" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2b4a9b9-52c6-4d16-a852-9ecb0e493707" absoluteBounds="6.25, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/QLKTXDataContext/PHONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6eb664ca-257c-4491-bb87-cdbbcace7643" absoluteBounds="6.265, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b27d5753-48c9-4fa7-ade8-a2f555f80217" absoluteBounds="3.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLKTXDataContext/DAYPHONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="611bd811-8734-4bc5-ae33-e6e8a25bb84f" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="463abd2d-8368-48b8-bef4-c37709eba3ae" absoluteBounds="6.25, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QLKTXDataContext/HOPDONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4b11ef5-dc3a-4b13-a4ee-fa4a4cccff0a" absoluteBounds="6.265, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f7cfc4e-2ce1-42a4-9766-6db7f6f4d4ab" absoluteBounds="0.75, 6.75, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/QLKTXDataContext/NGUOIDUNG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2583d51-3547-4429-800b-c8ab85643725" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5d50dce-62a1-4b66-becb-e0537b82eee2" absoluteBounds="9, 3.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/QLKTXDataContext/SINHVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb7d4f17-f9f6-432f-a65e-9d2ff4db2ec9" absoluteBounds="9.015, 3.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.45359537760417); (3.125 : 5.82859537760417); (3.125 : 5.89589680989583); (5.875 : 5.89589680989583); (6.25 : 5.52089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLKTXDataContext/CANBO_QL/CANBO_QL_PHONG" />
+      <nodes>
+        <classShapeMoniker Id="2e4c4f76-30b4-48d3-8ccc-51c899f1cecf" />
+        <classShapeMoniker Id="f2b4a9b9-52c6-4d16-a852-9ecb0e493707" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.66429768880208); (6.25 : 4.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLKTXDataContext/DAYPHONG/DAYPHONG_PHONG" />
+      <nodes>
+        <classShapeMoniker Id="b27d5753-48c9-4fa7-ade8-a2f555f80217" />
+        <classShapeMoniker Id="f2b4a9b9-52c6-4d16-a852-9ecb0e493707" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.63304518880208); (3.5 : 4.63304518880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLKTXDataContext/CANBO_QL/CANBO_QL_DAYPHONG" />
+      <nodes>
+        <classShapeMoniker Id="2e4c4f76-30b4-48d3-8ccc-51c899f1cecf" />
+        <classShapeMoniker Id="b27d5753-48c9-4fa7-ade8-a2f555f80217" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 1.63544840494792); (10 : 1.63544840494792); (10 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLKTXDataContext/HOPDONG/HOPDONG_SINHVIEN" />
+      <nodes>
+        <classShapeMoniker Id="463abd2d-8368-48b8-bef4-c37709eba3ae" />
+        <classShapeMoniker Id="b5d50dce-62a1-4b66-becb-e0537b82eee2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.63544840494792); (9 : 4.63544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLKTXDataContext/PHONG/PHONG_SINHVIEN" />
+      <nodes>
+        <classShapeMoniker Id="f2b4a9b9-52c6-4d16-a852-9ecb0e493707" />
+        <classShapeMoniker Id="b5d50dce-62a1-4b66-becb-e0537b82eee2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2bf7c17c-dadd-4713-bb53-2d100571945d" absoluteBounds="2.625, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLKTXDataContext/vThongtinPhongg" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b02627f0-936f-4ea3-a014-a45afa8a1fe6" absoluteBounds="2.6399999999999997, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

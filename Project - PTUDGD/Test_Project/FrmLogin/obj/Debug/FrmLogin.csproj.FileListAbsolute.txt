@@ -1,0 +1,11 @@
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\bin\Debug\FrmLogin.exe.config
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\bin\Debug\FrmLogin.exe
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\bin\Debug\FrmLogin.pdb
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.csprojResolveAssemblyReference.cache
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.FrmLogin.resources
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.Properties.Resources.resources
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.csproj.GenerateResource.Cache
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.exe
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.pdb
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.frmMain.resources
+C:\Users\home\documents\visual studio 2013\Projects\Test_Project\FrmLogin\obj\Debug\FrmLogin.Chinhsach_baomat.resources

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KTXSV" Class="QLKTXDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TUTUPS\SQLEXPRESS;Initial Catalog=KTXSV;Integrated Security=True" SettingsObjectName="FrmLogin.Properties.Settings" SettingsPropertyName="KTXSVConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CANBO_QL" Member="CANBO_QLs">
+    <Type Name="CANBO_QL">
+      <Column Name="MACBQL" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENCB" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PHONG" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Association Name="CANBO_QL_PHONG" Member="PHONGs" ThisKey="MACBQL" OtherKey="NGUOIQUANLY" Type="PHONG" />
+      <Association Name="CANBO_QL_DAYPHONG" Member="DAYPHONGs" ThisKey="MACBQL" OtherKey="MANQL" Type="DAYPHONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHONG" Member="PHONGs">
+    <Type Name="PHONG">
+      <Column Name="MAPHONG" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MADAY" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="TENPHONG" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="NGUOIQUANLY" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SLToida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PHONG_SINHVIEN" Member="SINHVIENs" ThisKey="MAPHONG" OtherKey="PHONG" Type="SINHVIEN" />
+      <Association Name="CANBO_QL_PHONG" Member="CANBO_QL" ThisKey="NGUOIQUANLY" OtherKey="MACBQL" Type="CANBO_QL" IsForeignKey="true" />
+      <Association Name="DAYPHONG_PHONG" Member="DAYPHONG" ThisKey="MADAY" OtherKey="MADAY" Type="DAYPHONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DAYPHONG" Member="DAYPHONGs">
+    <Type Name="DAYPHONG">
+      <Column Name="MADAY" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENDAY" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SOLUONGPHONG" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MANQL" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Association Name="DAYPHONG_PHONG" Member="PHONGs" ThisKey="MADAY" OtherKey="MADAY" Type="PHONG" />
+      <Association Name="CANBO_QL_DAYPHONG" Member="CANBO_QL" ThisKey="MANQL" OtherKey="MACBQL" Type="CANBO_QL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOPDONG" Member="HOPDONGs">
+    <Type Name="HOPDONG">
+      <Column Name="MAHD" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENHD" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TIENDIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIENNUOC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIENPHONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOPDONG_SINHVIEN" Member="SINHVIENs" ThisKey="MAHD" OtherKey="MAHD" Type="SINHVIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NGUOIDUNG" Member="NGUOIDUNGs">
+    <Type Name="NGUOIDUNG">
+      <Column Name="MA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="PhanQuyen" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SINHVIEN" Member="SINHVIENs">
+    <Type Name="SINHVIEN">
+      <Column Name="MASV" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENSV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CMND" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PHONG" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="NGAYVAOKTX" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NGAYRAKTX" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MAHD" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Association Name="HOPDONG_SINHVIEN" Member="HOPDONG" ThisKey="MAHD" OtherKey="MAHD" Type="HOPDONG" IsForeignKey="true" />
+      <Association Name="PHONG_SINHVIEN" Member="PHONG1" ThisKey="PHONG" OtherKey="MAPHONG" Type="PHONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vThongtinPhongg" Member="vThongtinPhonggs">
+    <Type Name="vThongtinPhongg">
+      <Column Name="TENPHONG" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="MADAY" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="NGUOIQUANLY" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
